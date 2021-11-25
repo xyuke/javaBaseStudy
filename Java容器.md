@@ -67,7 +67,61 @@
 ### 集合的优点
 
 1. 可以动态的保存任意多个对象
-
 2. 提供了一系列方便的操作对象的方法
 
-   
+### 介绍 
+
+![image-20211125160235082](C:\Users\abei\AppData\Roaming\Typora\typora-user-images\image-20211125160235082.png)
+
+![image-20211125155731996](C:\Users\abei\AppData\Roaming\Typora\typora-user-images\image-20211125155731996.png)
+
+
+
+```java
+package top.xywait.collection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
+public class Collection_ {
+    public static void main(String[] args) {
+        List list = new ArrayList();
+        // add: 添加单个元素
+        list.add("jack");
+        list.add(10);
+        list.add(true);
+        System.out.println("list="+list);
+        // list=[jack, 10, true]
+
+        // remove: 删除
+        //list.remove(0);     // 删除第一个元素，下标
+        list.remove("jack");    // 删除指定元素
+        System.out.println("list="+list);
+        // list=[10, true]
+
+        // contains: 查找元素是否存在
+        System.out.println(list.contains("Tom"));
+
+        // size: 获取元素的个数
+        System.out.println(list.size());
+
+        // isEmpty: 判断集合是否为空
+        System.out.println(list.isEmpty());
+
+        // clear: 清空集合
+        list.clear();
+
+        // addAll: 添加多个元素
+        ArrayList list2 = new ArrayList();
+        list2.add("西游记");
+        list2.add("水浒传");
+        list.addAll(list2);
+        System.out.println(list);
+        // [西游记, 水浒传]
+    }
+}
+
+```
+
